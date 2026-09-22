@@ -1,0 +1,531 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmileLux Dental Center — Grace Park, Caloocan</title>
+<meta name="description" content="SmileLux Dental Center offers cleaning, braces, extraction, implants, and whitening in Grace Park, Caloocan. Book your appointment today.">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --blue: #1a73e8;
+    --blue-dark: #1557b0;
+    --blue-light: #e8f0fe;
+    --white: #ffffff;
+    --gray-50: #f8f9fa;
+    --gray-100: #f1f3f4;
+    --gray-200: #e8eaed;
+    --gray-500: #9aa0a6;
+    --gray-700: #5f6368;
+    --gray-900: #202124;
+    --radius: 12px;
+    --shadow: 0 2px 12px rgba(0,0,0,0.08);
+    --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: var(--gray-900);
+    line-height: 1.6;
+    background: var(--white);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: var(--blue); text-decoration: none; }
+
+  .container { max-width: 960px; margin: 0 auto; padding: 0 32px; }
+
+  /* ── NAV ── */
+  .nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--gray-200);
+    padding: 12px 0;
+  }
+  .nav .container { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { height: 48px; width: auto; border-radius: 4px; }
+  .nav-logo-text { font-size: 16px; font-weight: 700; color: var(--blue); }
+  .nav-cta {
+    background: var(--blue); color: var(--white);
+    padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: 600;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--blue-dark); }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+    color: var(--white);
+    padding: 80px 0 70px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url('https://cdn.shopify.com/s/files/1/0764/2061/2262/files/exterior.jpg?v=1790060228') center/cover no-repeat;
+    opacity: 0.18;
+  }
+  .hero .container { position: relative; z-index: 1; }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+  .hero p {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 28px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 28px;
+    border-radius: 28px;
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+  }
+  .btn-primary { background: var(--white); color: var(--blue); }
+  .btn-primary:hover { background: var(--gray-100); transform: translateY(-1px); box-shadow: var(--shadow-lg); }
+  .btn-secondary { background: rgba(255,255,255,0.15); color: var(--white); border: 2px solid rgba(255,255,255,0.4); }
+  .btn-secondary:hover { background: rgba(255,255,255,0.25); }
+  .btn-full { justify-content: center; }
+  .btn-messenger { background: #0084ff; color: var(--white); }
+  .btn-messenger:hover { background: #0073e6; }
+  .btn-call { background: #34a853; color: var(--white); }
+  .btn-call:hover { background: #2d9249; }
+
+  /* ── SECTION ── */
+  .section { padding: 64px 0; }
+  .section-alt { background: var(--gray-50); }
+  .section-title {
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .section-sub {
+    font-size: 16px;
+    color: var(--gray-700);
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ── PROBLEM SECTION ── */
+  .problem-list { list-style: none; }
+  .problem-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .problem-item:last-child { border-bottom: none; }
+  .problem-icon {
+    flex-shrink: 0;
+    width: 44px; height: 44px;
+    background: #fef3e6;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+  }
+  .problem-text h3 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+  .problem-text p { font-size: 14px; color: var(--gray-700); line-height: 1.5; }
+
+  /* ── SERVICES ── */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+  }
+  .service-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 20px 16px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  .service-card:hover { transform: translateY(-2px); }
+  .service-icon {
+    width: 48px; height: 48px;
+    background: var(--blue-light);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 12px;
+    font-size: 22px;
+  }
+  .service-card h3 { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+  .service-card p { font-size: 12px; color: var(--gray-700); line-height: 1.4; }
+
+  /* ── INTERIOR PHOTO ── */
+  .interior-wrap {
+    overflow: hidden;
+  }
+  .interior-wrap img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+  }
+
+  /* ── TRUST ── */
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .trust-item {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 20px 16px;
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+  .trust-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+  .trust-item h3 { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+  .trust-item p { font-size: 12px; color: var(--gray-700); line-height: 1.4; }
+
+  /* ── LOCATION ── */
+  .location-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .location-map {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+  .location-info { padding: 20px; }
+  .location-info h3 { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+  .location-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    font-size: 14px;
+    color: var(--gray-700);
+  }
+  .location-row-icon { flex-shrink: 0; width: 20px; text-align: center; }
+  .hours-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 4px 12px;
+    font-size: 13px;
+    margin-top: 8px;
+  }
+  .hours-day { font-weight: 600; color: var(--gray-900); }
+  .hours-time { color: var(--gray-700); }
+  .hours-note {
+    grid-column: 1 / -1;
+    font-size: 11px;
+    color: var(--gray-500);
+    font-style: italic;
+    margin-top: 4px;
+  }
+
+  /* ── CTA SECTION ── */
+  .cta-section {
+    background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+    color: var(--white);
+    padding: 64px 0;
+    text-align: center;
+  }
+  .cta-section h2 { font-size: 32px; font-weight: 800; margin-bottom: 8px; }
+  .cta-section p { font-size: 16px; opacity: 0.9; margin-bottom: 28px; }
+  .cta-buttons { display: flex; justify-content: center; gap: 16px; }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--gray-900);
+    color: var(--gray-500);
+    padding: 24px 0;
+    text-align: center;
+    font-size: 12px;
+  }
+  .footer a { color: var(--gray-200); }
+
+  /* ── FLOATING CTA ── */
+  .floating-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--gray-200);
+    padding: 12px 20px;
+    z-index: 100;
+    display: none;
+    gap: 10px;
+  }
+  .floating-cta .btn { flex: 1; padding: 12px 16px; font-size: 14px; }
+
+  /* ── RESPONSIVE (max-width) ── */
+  @media (max-width: 1023px) {
+    .container { max-width: 720px; }
+    .hero h1 { font-size: 40px; }
+    .services-grid { grid-template-columns: repeat(3, 1fr); grid-auto-rows: auto; }
+    .service-card:nth-child(5) { grid-column: 2 / 3; }
+  }
+
+  @media (max-width: 767px) {
+    .container { padding: 0 20px; }
+    .nav-logo { height: 36px; }
+    .hero { padding: 60px 0 50px; }
+    .hero h1 { font-size: 32px; }
+    .hero p { font-size: 16px; }
+    .section { padding: 48px 0; }
+    .section-title { font-size: 22px; }
+    .services-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .service-card:nth-child(5) { grid-column: 1 / -1; }
+    .trust-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .interior-wrap img { height: 220px; }
+    .location-map { height: 200px; }
+    .cta-section h2 { font-size: 24px; }
+    .cta-buttons { flex-direction: column; max-width: 320px; margin: 0 auto; }
+    .cta-buttons .btn { width: 100%; justify-content: center; }
+    .floating-cta { display: flex; }
+    .spacer { height: 80px; }
+  }
+</style>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container">
+    <img src="https://cdn.shopify.com/s/files/1/0764/2061/2262/files/logo.jpg?v=1790060228" alt="SmileLux Dental Center" class="nav-logo">
+    <a href="https://m.me/100083201926935" class="nav-cta" target="_blank">Book Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <span class="hero-badge">Grace Park, Caloocan</span>
+    <h1>Your Smile Deserves Better Than Googling "Dental Clinic Near Me"</h1>
+    <p>SmileLux Dental Center — professional dental care right in your neighborhood.</p>
+    <div class="hero-buttons">
+      <a href="https://m.me/100083201926935" class="btn btn-primary" target="_blank">
+        <svg width="18" height="18" viewbox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.145 2 11.243c0 2.907 1.432 5.504 3.677 7.21V22l3.376-1.847A11.4 11.4 0 0012 20.486c5.523 0 10-4.145 10-9.243C22 6.145 17.523 2 12 2zm1 12.5l-2.5-2.7L6 14.5l4.5-4.8 2.5 2.7L17 9.7l-4 4.8z"></path></svg>
+        Chat on Messenger
+      </a>
+      <a href="tel:+639566707598" class="btn btn-secondary">
+        <svg width="18" height="18" viewbox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"></path></svg>
+        Call Now
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">3 Signs You've Been Avoiding the Dentist Too Long</h2>
+    <p class="section-sub">Most people wait until it hurts. Don't be most people.</p>
+    <ul class="problem-list">
+      <li class="problem-item">
+        <div class="problem-icon">😬</div>
+        <div class="problem-text">
+          <h3>You only think about your teeth when they hurt</h3>
+          <p>Pain is your mouth's way of telling you something's wrong — and by then, the fix is usually bigger (and pricier) than a routine checkup.</p>
+        </div>
+      </li>
+      <li class="problem-item">
+        <div class="problem-icon">☕</div>
+        <div class="problem-text">
+          <h3>You've gotten used to the stains</h3>
+          <p>Coffee, tea, soda — they add up. What used to bother you now just looks "normal." A professional cleaning can fix that in one visit.</p>
+        </div>
+      </li>
+      <li class="problem-item">
+        <div class="problem-icon">🩸</div>
+        <div class="problem-text">
+          <h3>Your gums bleed when you brush</h3>
+          <p>Bleeding gums aren't something to ignore. It's often the first sign of gum disease — and the earlier you catch it, the easier it is to treat.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">What We Can Do For You</h2>
+    <p class="section-sub">From routine cleanings to complete smile makeovers.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">✨</div>
+        <h3>Teeth Cleaning</h3>
+        <p>Fresh start for your oral health. Removes plaque, tartar, and surface stains.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🦷</div>
+        <h3>Dental Braces</h3>
+        <p>Straighten your teeth at any age. Traditional and modern options available.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🩺</div>
+        <h3>Tooth Extraction</h3>
+        <p>Safe, quick, and as painless as possible. Simple and surgical extractions.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔩</div>
+        <h3>Dental Implants</h3>
+        <p>Permanent solutions for missing teeth. Look and function like natural teeth.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">😁</div>
+        <h3>Teeth Whitening</h3>
+        <p>Brighter smile in one visit. Professional-grade results that over-the-counter products can't match.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTERIOR PHOTO -->
+<div class="interior-wrap">
+  <img src="https://cdn.shopify.com/s/files/1/0764/2061/2262/files/interior.jpg?v=1790060228" alt="SmileLux Dental Center interior">
+</div>
+
+<!-- TRUST -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Why Trust SmileLux?</h2>
+    <p class="section-sub">We put our name on every procedure we do.</p>
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="trust-icon">🛡️</div>
+        <h3>1-Week Warranty</h3>
+        <p>If something feels off within 7 days, come back — we'll make it right.</p>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">📋</div>
+        <h3>Licensed Professionals</h3>
+        <p>Our dentists are PRC-licensed and trained in modern dental procedures.</p>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🔗</div>
+        <h3>Tooth N' Braces Network</h3>
+        <p>Part of the Tooth N' Braces Dental Clinic family, serving Metro Manila.</p>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🏥</div>
+        <h3>Modern Facility</h3>
+        <p>Clean, comfortable clinic with up-to-date dental equipment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Find Us</h2>
+    <p class="section-sub">Right in the heart of Grace Park, Caloocan.</p>
+    <div class="location-card">
+      <iframe class="location-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.0!2d120.98!3d14.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b1a1a1a1a1a1%3A0x1234567890abcdef!2sKamantigue+200%2C+1403+Caloocan+City%2C+Philippines!5e0!3m2!1sen!2sph!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="location-info">
+        <h3>SmileLux Dental Center</h3>
+        <div class="location-row">
+          <span class="location-row-icon">📍</span>
+          <span>Unit 204, #200 Kamantigue St. cor 11th Ave, Grace Park East, Brgy 100, Caloocan City</span>
+        </div>
+        <div class="location-row">
+          <span class="location-row-icon">📞</span>
+          <span>0956 670 7598 / 0969 038 4415</span>
+        </div>
+        <div class="location-row">
+          <span class="location-row-icon">💬</span>
+          <a href="https://m.me/100083201926935" target="_blank">Message us on Facebook</a>
+        </div>
+        <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--gray-200);">
+          <div class="location-row">
+            <span class="location-row-icon">🕐</span>
+            <span style="font-weight: 600;">Operating Hours</span>
+          </div>
+          <div class="hours-grid">
+            <span class="hours-day">Monday</span><span class="hours-time">9:30 AM – 6:00 PM</span>
+            <span class="hours-day">Tuesday</span><span class="hours-time">9:30 AM – 6:00 PM</span>
+            <span class="hours-day">Wednesday</span><span class="hours-time">9:30 AM – 6:00 PM</span>
+            <span class="hours-day">Thursday</span><span class="hours-time">9:30 AM – 6:00 PM</span>
+            <span class="hours-day">Friday</span><span class="hours-time">9:30 AM – 6:00 PM</span>
+            <span class="hours-day">Saturday</span><span class="hours-time">9:30 AM – 6:00 PM</span>
+            <span class="hours-day">Sunday</span><span class="hours-time">9:30 AM – 5:30 PM</span>
+            <span class="hours-note">Hours may vary. Call to confirm.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready for a Healthier Smile?</h2>
+    <p>Book your appointment today. It only takes one message.</p>
+    <div class="cta-buttons">
+      <a href="https://m.me/100083201926935" class="btn btn-primary btn-full" target="_blank">
+        <svg width="18" height="18" viewbox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.145 2 11.243c0 2.907 1.432 5.504 3.677 7.21V22l3.376-1.847A11.4 11.4 0 0012 20.486c5.523 0 10-4.145 10-9.243C22 6.145 17.523 2 12 2zm1 12.5l-2.5-2.7L6 14.5l4.5-4.8 2.5 2.7L17 9.7l-4 4.8z"></path></svg>
+        Chat on Messenger
+      </a>
+      <a href="tel:+639566707598" class="btn btn-call btn-full">
+        <svg width="18" height="18" viewbox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"></path></svg>
+        Call 0956 670 7598
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <p>SmileLux Dental Center © 2026. All rights reserved.</p>
+    <p style="margin-top: 4px;">Part of the <a href="https://www.facebook.com/tnbdental/" target="_blank">Tooth N' Braces Dental Clinic</a> network.</p>
+  </div>
+</footer>
+
+<!-- FLOATING CTA (mobile) -->
+<div class="floating-cta">
+  <a href="https://m.me/100083201926935" class="btn btn-messenger" target="_blank">
+    <svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.145 2 11.243c0 2.907 1.432 5.504 3.677 7.21V22l3.376-1.847A11.4 11.4 0 0012 20.486c5.523 0 10-4.145 10-9.243C22 6.145 17.523 2 12 2zm1 12.5l-2.5-2.7L6 14.5l4.5-4.8 2.5 2.7L17 9.7l-4 4.8z"></path></svg>
+    Messenger
+  </a>
+  <a href="tel:+639566707598" class="btn btn-call">
+    <svg width="16" height="16" viewbox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"></path></svg>
+    Call
+  </a>
+</div>
+
+<div class="spacer"></div>
